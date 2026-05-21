@@ -1031,8 +1031,15 @@ body::after{
 <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
 <script>
 'use strict';
-const CFG = { SERVER:(window.__NEXTALK_CONFIG__&&window.__NEXTALK_CONFIG__.API_URL)||'http://localhost:5000', API:'http://localhost:5000/api' };
+const SERVER_URL =
+  (window.__NEXTALK_CONFIG__ &&
+   window.__NEXTALK_CONFIG__.API_URL)
+   || 'https://nextalk-6fad.onrender.com';
 
+const CFG = {
+  SERVER: SERVER_URL,
+  API: `${SERVER_URL}/api`
+};
 const S = {
   user:null, token:null, socket:null,
   activeUid:null, activeName:null, activeUname:null,
