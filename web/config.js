@@ -6,5 +6,5 @@ window.__NEXTALK_CONFIG__ = {
   // Examples:
   //   "http://localhost:5000"
   //   "https://nextalk-api.onrender.com"
-  API_URL: "http://localhost:5000"
+  API_URL: "https://nextalk-6fad.onrender.com"
 };
