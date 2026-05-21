@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: nextalk-api
+    runtime: node
+    plan: free
+    rootDir: api
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: JWT_EXPIRES_IN
+        value: 7d
